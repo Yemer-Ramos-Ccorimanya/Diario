@@ -5,7 +5,7 @@ class Modelo{
             $rutas == 'empleados' || 
             $rutas == 'registrase' || 
             $rutas == 'salir' ||
-            $rutas == 'texto_diario ' ||
+            $rutas == 'texto_diario' ||
             $rutas == 'editar')
         {
             $pagina = "Vistas/modulos/".$rutas. ".php";

@@ -16,42 +16,42 @@ echo "hola ";
 
     // if ($conexion->connect_error) die ("Fatal error");
     
-    //     $a=$_SESSION['ide'] ;
-    //     $query = "SELECT * FROM diario WHERE id_usuario=$a";
-    //     $result = $conexion->query($query);
-    //     $filas = $result->num_rows;
+        $a=$_SESSION['ide'] ;
+   
+    $respuesta = AdminM::DevolverNotas($a);
+      $filas = $respuesta ->num_rows;
         
-    //     echo"Tienes $filas notas esctritas<br/>";
-    //     echo"<br/>";
-    //     for ($j=0; $j<$filas;++$j)
-    //     {
-    //         $row = $result->fetch_array(MYSQLI_NUM);
+        echo"Tienes $filas notas esctritas<br/>";
+        echo"<br/>";
+        for ($j=0; $j<$filas;++$j)
+        {
+            $row = $respuesta ->fetch_array(MYSQLI_NUM);
 
-    //     $r0 = htmlspecialchars($row[0]);
-    //     $titulo = htmlspecialchars($row[1]);
-    //     $fecha = htmlspecialchars($row[2]);
-    //     $texto = htmlspecialchars($row[4]);
+        $r0 = htmlspecialchars($row[0]);
+        $titulo = htmlspecialchars($row[1]);
+         $fecha = htmlspecialchars($row[2]);
+        $texto = htmlspecialchars($row[4]);
         
-    //     echo "Titulo: $titulo</br>" ;
-    //     echo "Texto: $texto</br>" ;
-    //     echo "Fecha : $fecha</br>" ;
-    //     echo <<<_END
-    //         <form action="eliminar_modificar.php" method="post">
-    //         <input type='hidden' name='delete' value='yes'>
-    //         <input type="hidden" name="titulo" value="$titulo">  
-    //         <input type="hidden" name="texto" value="$texto"> 
-    //         <input type="hidden" name="fecha" value="$fecha"> 
-    //         <input type="submit" name="eliminar" value="eliminar">
-    //         <input type="submit" name="modificar" value="modificar">
-    //         </form>
-    //         _END;
+       echo "Titulo: $titulo</br>" ;
+        echo "Texto: $texto</br>" ;
+        echo "Fecha : $fecha</br>" ;
+       echo <<<_END
+          <form action="eliminar_modificar.php" method="post">
+          <input type='hidden' name='delete' value='yes'>
+           <input type="hidden" name="titulo" value="$titulo">  
+          <input type="hidden" name="texto" value="$texto"> 
+        <input type="hidden" name="fecha" value="$fecha"> 
+        <input type="submit" name="eliminar" value="eliminar">
+        <input type="submit" name="modificar" value="modificar">
+        </form>
+_END;
 
             
 
         
 
-    //     }
-    //     $result->close();
-    //     $conexion->close();
+     }
+     $respuesta->close();
+
         
 ?>

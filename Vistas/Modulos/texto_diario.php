@@ -1,11 +1,11 @@
 <?php
 echo "hola ";
-    // require_once 'database.php';
-    // if(!empty($_COOKIE['nombre'])){
-    // $r=$_COOKIE['nombre'];
-    // echo" <h1>$r</h1>";}
-    // session_start();
-    // echo "<h1>bien venido <br/></h1>";
+  
+    if(!empty($_COOKIE['nombre'])){
+     $r=$_COOKIE['nombre'];
+     echo" <h1>$r</h1>";}
+     session_start();
+    echo "<h1>bien venido <br/></h1>";
     // echo " <a href='nueva_nota.php'>crear nueva nota</a> <br/>";
     // echo "<br/>";
     // echo " <a href='logout.php'>cerrar session</a><br/> ";

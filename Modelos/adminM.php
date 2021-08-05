@@ -14,6 +14,7 @@
             return $result;
             
             
+            
         }
         static public function RegistroM($datosC, $tablaBD){
             $cbd = ConexionBD::cBD();
@@ -25,12 +26,8 @@
             
         }
 
-        static public function DevolverNotas($dato){
-            $cbd = ConexionBD::cBD();
-            $query = "SELECT * FROM diario WHERE id_usuario=$dato";
-            $result = $cbd ->query($query);
-            return $result;
-        }
+        
+        
         
     
     }

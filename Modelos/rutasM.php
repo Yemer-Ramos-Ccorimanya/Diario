@@ -2,11 +2,16 @@
 class Modelo{
     static public function RutasModelo($rutas){
         if( $rutas == "ingreso" || 
-            $rutas == 'empleados' || 
+            $rutas == "empleados" || 
             $rutas == 'registrase' || 
             $rutas == 'salir' ||
+            $rutas == 'menu' ||
             $rutas == 'texto_diario' ||
-            $rutas == 'editar')
+            $rutas == 'editar'||
+            $rutas == 'eliminar'||
+            $rutas == 'modificar_nota'||
+            $rutas == 'crear_nueva_nota')
+
         {
             $pagina = "Vistas/modulos/".$rutas. ".php";
         }

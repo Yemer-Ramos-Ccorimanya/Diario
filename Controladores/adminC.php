@@ -1,8 +1,9 @@
 <?php  //Controladores/adminC.php
 class AdminC{
     public function IngresoC(){
+        
         session_start();
-        if(isset($_SESSION['Ingreso'])) header("location: index.php?ruta=empleados");
+        if(isset($_SESSION['Ingreso'])) header("location: index.php?ruta=texto_diario");
 
         if (!empty($_POST['usuarioI'])&& !empty($_POST['claveI']))
         {

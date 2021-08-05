@@ -10,12 +10,14 @@
 <body>
 
 <?php
+
 include 'modulos/menu.php';
 ?>
 
 <section>
 
 <?php
+
     $rutas = new RutasControlador();
     $modulo = $rutas->Rutas();
     include $modulo;

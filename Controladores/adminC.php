@@ -29,7 +29,7 @@ class AdminC{
 
                     //cookie
                     setcookie('nombre',$_SESSION['nombre'],time()+ 5);
-
+                    $GLOBALS['entrada']=true;
                     $_SESSION['Ingreso']=true;
                     header("location: index.php?ruta=texto_diario");
                     
@@ -53,7 +53,7 @@ class AdminC{
 
         session_start();
         if(isset($_SESSION['Ingreso']))
-            header("location: index.php?ruta=empleados");
+            header("location:index.php?ruta=registrarse");
         if(isset($_POST["usuarioI"])){
             if($_POST['clave2']==$_POST['claveI'])
             {

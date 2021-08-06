@@ -2,9 +2,9 @@
 class Modelo{
     static public function RutasModelo($rutas){
         if( $rutas == "ingreso" || 
-            $rutas == "empleados" || 
-            $rutas == 'registrase' || 
+            $rutas == 'registrese' || 
             $rutas == 'salir' ||
+            $rutas == 'buscar' ||
             $rutas == 'menu' ||
             $rutas == 'texto_diario' ||
             $rutas == 'editar'||

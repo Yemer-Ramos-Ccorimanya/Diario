@@ -3,7 +3,6 @@ class RutasControlador {
     public function Plantilla(){
         return 'Vistas/plantilla.php';
     }
-
     
     public function Rutas(){
         if (isset($_GET['ruta'])){

@@ -69,14 +69,14 @@ class notasM extends ConexionBD{
         $cbd = ConexionBD::cBD();
         extract($datosC);
         $query = "SELECT * FROM diario 
-         WHERE   fechaalterna BETWEEN '$fecha' AND '$fecha2'";
+         WHERE id_usuario=$ide AND  fechaalterna BETWEEN '$fecha' AND '$fecha2'";
         $result = $cbd ->query($query);
         return $result;
     }
     static public function BuscarNotasSoloFecha($datosC){
         $cbd = ConexionBD::cBD();
         extract($datosC);
-        $query = "SELECT * FROM diario WHERE id_usuario=$id and fechaalterna='$fecha'";
+        $query = "SELECT * FROM diario WHERE id_usuario=$ide and fechaalterna='$fecha'";
         $result = $cbd ->query($query);
         return $result;
     }

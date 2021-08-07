@@ -1,15 +1,46 @@
 <?php 
 class notasC {
 
+    public function MostrarNotasC2($respuesta){
+        
+        $filas = $respuesta ->num_rows;
+
+        echo"Tienes $filas notas esctritas<br/>";
+        echo"<br/>";
+        
+        for ($j=$filas; $j>0;--$j)
+        {
+          
+          $row = $respuesta -> fetch_array(MYSQLI_NUM);
+            
+              
+          $r0 = htmlspecialchars($row[0]);
+          $titulo = htmlspecialchars($row[1]);
+          $fecha = htmlspecialchars($row[2]);
+          $texto = htmlspecialchars($row[4]);
+          
+          echo "Titulo: $titulo</br>" ;
+          echo "Texto: $texto</br>" ;
+          echo "Fecha : $fecha</br>" ;
+          echo <<<_END
+          <form method="post" action= "">
+              <input type='hidden' name='delete' value='yes'>
+              <input type="hidden" name="titulo" value="$titulo">  
+              <input type="hidden" name="texto" value="$texto"> 
+            <input type="hidden" name="fecha" value="$fecha"> 
+            <input type="submit" name="eliminar" value="eliminar">
+            <input type="submit" name="modificar" value="modificar">
+          </form>
+_END;
+    }
+    }
     public function MostrarnotasC(){
 
         $ide=$_SESSION['ide'];
         $tablaBD = 'diario';
         $respuesta = notasM::MostrarNotasM($tablaBD,$ide);
-        
         $filas = $respuesta ->num_rows;
-       
-        
+
         echo"Tienes $filas notas esctritas<br/>";
         echo"<br/>";
         
@@ -39,8 +70,8 @@ class notasC {
 _END;
     }
 }  
+
     public function BorrarNotasC(){
-        session_start();
             $datosC = array(
                         'ide'=> $_SESSION['ide'],
                         'titulo'=>$_POST['titulo'],
@@ -58,11 +89,13 @@ _END;
 
     public function  CrearNotasC(){
         session_start();
-        if(!empty($_POST['titulo']) &&!empty($_POST['fecha']) &&!empty($_POST['texto'])&&!empty($_POST['fecha2'])){
+        if(!empty($_POST['titulo']) &&!empty($_POST['fecha']) &&!empty($_POST['texto'])){
+            $fechahora= $_POST['fecha'];
+            $fecha=substr("$fechahora",0,10); 
             $datosC = array(
                         'ide'=> $_SESSION['ide'],
                         'titulo'=>$_POST['titulo'],
-                        'fecha2'=>$_POST['fecha2'],
+                        'fecha2'=>$fecha,
                         'fecha'=>$_POST['fecha'],
                         'texto'=>$_POST['texto'] 
                     );
@@ -144,6 +177,7 @@ _END;
         
     }
     
+
 
 }
 ?>

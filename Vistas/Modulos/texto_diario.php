@@ -17,8 +17,9 @@
       $titulo3=$_POST['titulo'];
       $texto3=$_POST['texto'];
       $fecha3=$_POST['fecha'];
+      $condicion3=$_POST['condicion'];
       
-      header("location: index.php?ruta=modificar_nota&titulo=$titulo3&texto=$texto3&fecha=$fecha3");
+      header("location: index.php?ruta=modificar_nota&titulo=$titulo3&texto=$texto3&fecha=$fecha3&condicion=$condicion3");
 	  }
     
       $a=$_SESSION['ide'];

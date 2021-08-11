@@ -2,7 +2,10 @@
 class Modelo{
     static public function RutasModelo($rutas){
         if( $rutas == "ingreso" || 
+            $rutas == "comentar_notas" || 
+            $rutas == "notas_publicas" || 
             $rutas == 'registrese' || 
+            $rutas == 'registrar_datos' || 
             $rutas == 'salir' ||
             $rutas == 'buscar' ||
             $rutas == 'menu' ||

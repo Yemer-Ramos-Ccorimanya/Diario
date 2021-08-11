@@ -11,6 +11,7 @@
     $titulo12=$_GET['titulo'];
     $texto12=$_GET['texto'];
     $fecha12=$_GET['fecha'];
+    $condicion12=$_GET['condicion'];
     echo "Titulo: $titulo12</br>" ;
     echo "Fecha : $fecha12</br>" ;
     echo"</br>";
@@ -21,6 +22,8 @@
     <input type="hidden" name="fecha2" value="$fecha12">  
     <input type="hidden" name="titulo2" value="$titulo12">  
     <br><textarea name="texto"  cols="100" rows="10" wrap="hard"  placeholder="¿Que paso hoy?">$texto12</textarea></br>
+    privado <input type="radio" name="condicion" value="privado" checked="checked">
+    publico <input type="radio" name="condicion" value="publico">
     <input type="submit" name="modificar" value="modificar">
     <input type="submit" name="cancelar" value="cancelar">
     </form>

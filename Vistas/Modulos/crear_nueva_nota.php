@@ -11,6 +11,8 @@
             <input type="hidden" name="fecha2" value="$fecha">  
             <input type="datetime-local" name="fecha" value=$fechahora >
             <br><textarea name="texto" rows="10" cols="50" placeholder="¿Que paso hoy?"></textarea></br>
+            privado <input type="radio" name="condicion" value="privado" checked="checked">
+            publico <input type="radio" name="condicion" value="publico">
             <input type="submit" name="guarda" value="Guardar">
             <input type="submit" name="cancelar" value="cancelar">
             

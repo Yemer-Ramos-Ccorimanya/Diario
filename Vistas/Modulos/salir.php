@@ -1,7 +1,6 @@
 <?php
-
-    session_start();
     session_destroy();
+    //session_start();
+    
 ?>
-<br> <!-- Vistas/Modulos/registrar.php -->
-<h1>Haz cerrado sesión</h1>
+

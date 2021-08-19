@@ -1,6 +1,6 @@
 <?php 
 
- session_start();
+
 if(!empty($_POST['eliminar'])){
 		
     $notas = new notasC();;

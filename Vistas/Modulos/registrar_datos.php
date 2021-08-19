@@ -1,5 +1,5 @@
 <br> 
-<h1>fff</h1>
+<h1></h1>
 
 <form method="post" action="">
     <input type="text" placeholder="foto" name="foto" required>

@@ -5,13 +5,16 @@ class Modelo{
             $rutas == "comentar_notas" || 
             $rutas == "notas_publicas" || 
             $rutas == 'registrese' || 
+            $rutas == 'ver_reacciones' || 
             $rutas == 'registrar_datos' || 
             $rutas == 'salir' ||
             $rutas == 'buscar' ||
+            $rutas == 'reaccionar' ||
             $rutas == 'menu' ||
             $rutas == 'texto_diario' ||
             $rutas == 'editar'||
             $rutas == 'eliminar'||
+            $rutas == 'ver_comentarios'||
             $rutas == 'modificar_nota'||
             $rutas == 'crear_nueva_nota')
 

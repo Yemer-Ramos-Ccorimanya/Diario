@@ -12,10 +12,14 @@
         $texto3=$_POST['texto'];
         $fecha3=$_POST['fecha'];
         $id_nota3=$_POST['id_nota'];
-        
+      
         header("location: index.php?ruta=ver_comentarios&titulo=$titulo3&fecha=$fecha3&id_nota=$id_nota3");
-	 }
+?>
 
+<?php
+}
+?>
+   <?php
     if(!empty($_POST['ver_reacciones'])){
 		
       $titulo3=$_POST['titulo'];

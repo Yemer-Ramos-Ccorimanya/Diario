@@ -17,3 +17,14 @@ $respuesta = notasM::Ver_ComentariosM($datosC);
        
 
 ?>
+<form method="post" action="">
+	<input type="submit" name="dejar_de_ver_comentarios" value="dejar de ver comentarios">
+</form>
+
+<?php
+if(!empty( $_POST['dejar_de_ver_comentarios'])){
+    header("location: index.php?ruta=notas_publicas");
+
+}
+
+?>

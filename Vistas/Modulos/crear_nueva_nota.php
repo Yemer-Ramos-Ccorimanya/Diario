@@ -7,12 +7,11 @@
         echo <<<_END
     
         <form method="post" action= "">
-            <input type="submit" name="guarda" value="Guardar">
-            <input type="search" name="titulo"  placeholder="Titulo">
-            <input type="hidden" name="fecha2" value="$fecha">  
+            <input type="search"  name="titulo"  placeholder="Titulo" required>
+            <input type="hidden" name="fecha2" value="$fecha" >  
             <input type="datetime-local" name="fecha" value=$fechahora >
             <input type="hidden" name="autor" value="$autor">
-            <br><textarea name="texto" rows="10" cols="50" placeholder="¿Que paso hoy?"></textarea></br>
+            <br><textarea name="texto" required rows="10" cols="50" placeholder="¿Que paso hoy?"></textarea></br>
             privado <input type="radio" name="condicion" value="privado" checked="checked">
             publico <input type="radio" name="condicion" value="publico">
             <input type="submit" name="guarda" value="Guardar">

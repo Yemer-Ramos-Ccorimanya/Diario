@@ -66,7 +66,7 @@ class AdminC{
                     $respuesta = AdminM::RegistroM($datosC, $tablaBD);
 
                     if (!$respuesta) {echo"no se puedo registrar"; }
-
+ 
                     else{
                         $datosC = array(    
                             "usuario"=>$_POST["usuarioI"], 

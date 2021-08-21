@@ -134,7 +134,22 @@ class notasM extends ConexionBD{
         $result = $cbd ->query($query);
         return $result;
     }
- 
+
+    static public function GuardarDatos($datosC){
+        $cbd = ConexionBD::cBD();
+        extract($datosC);
+        $query = "INSERT INTO datos_usuario(id_usuario,fecha_introducion_datos,nombre,apellido,edad,ciudad,archivo) 
+        VALUES ('$id_usuario', '$fecha_introduccion','$nombre','$apellido','$edad','$ciudad','$foto')";
+        $resultado = $cbd->query($query);
+        return $resultado;
+    }
+
+    static public function VerDatosM($id_usuario){
+        $cbd = ConexionBD::cBD();
+        $query = "SELECT * FROM datos_usuario WHERE id_usuario=$id_usuario ";
+        $result = $cbd ->query($query);
+        return $result;
+    }
 }
 
 ?>

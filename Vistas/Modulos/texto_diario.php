@@ -1,6 +1,8 @@
+
 <?php
   
-  require_once "perfil.php";
+  require_once "registrar_datos.php";
+  require_once "ver_datos.php";
     if(!empty($_COOKIE['nombre'])){
      $r=$_COOKIE['nombre'];
      echo" <h1>$r</h1>";}
@@ -24,8 +26,7 @@
       $a=$_SESSION['ide'];
       $notas = new notasC();;
 	    $notas->MostrarnotasC();;
-      
-        
+         
 ?>
 		
 		

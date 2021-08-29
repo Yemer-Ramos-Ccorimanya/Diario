@@ -1,0 +1,79 @@
+*{
+	margin: 0;
+	padding: 0;
+    background-color: #363434; 
+   
+
+}
+
+nav{
+	position:relative;
+	margin:auto;
+	width:80%;
+	height:auto;
+	background:white	;
+}
+
+nav ul{
+	position:relative;
+	margin:auto;
+	width:100%;
+	text-align: center;
+}
+
+nav ul li{
+
+	display:inline-block;
+	width:24%;
+	line-height: 50px;
+	list-style: none;
+}
+
+nav ul li a{
+	color:white;
+	text-decoration: none;
+	font-size: 25px;
+}
+
+nav ul li a:hover{
+	color:white;
+}
+
+section{
+	position: relative;
+	margin: auto;
+	width:400px;
+    color:white;
+}
+
+section h1{
+	position: relative;
+	margin: auto;
+	padding:10px;
+	text-align: center;
+    color: white ;
+}
+
+section form{
+	position:relative;
+	margin:auto;
+	width:400px;
+}
+
+section form input{
+	display:inline-block;
+	padding:5px;
+	margin:0px;
+    color:white;
+    background-color: #043b39; 
+    transition: all 500ms ease 0ms;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-7px);
+}
+
+section form input[type="submit"]{
+	position:relative;
+	margin:20px auto;
+	left:4.5%;
+
+}

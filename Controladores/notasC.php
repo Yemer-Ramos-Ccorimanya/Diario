@@ -14,6 +14,9 @@ class notasC {
         return $conexion->real_escape_string($string);
 
     } 
+    static public function salir(){
+        session_destroy();
+  } 
 
     static public function get_post($con, $var){
 
@@ -189,9 +192,10 @@ public function Mostrarnotas_PublicasC(){
             <input type="submit" name="comentar" value="comentar">
             <input type="submit" name="ver_comentarios" value="ver comentario">
             <input type="submit" name="reaccionar" value="reaccionar">
-            <input type="submit" name="ver_reacciones" value="ver_reacciones">
+            <input type="submit" name="ver_reacciones" value="ver reacciones">
         </form>
 _END;
+echo "</br>" ;
         
     }
 } 

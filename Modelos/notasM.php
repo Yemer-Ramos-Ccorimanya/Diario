@@ -28,9 +28,12 @@ class notasM extends ConexionBD{
         extract($datosC);
         $titulo1=notasC::mysql_fix_string($cbd,$titulo);
         //"DELETE FROM diario WHERE id_usuario=$ide AND titulo='$titulo' AND fecha='$fecha'";
-        $query = "DELETE FROM $tablaBD WHERE id_usuario ='$ide' and titulo ='$titulo1' and fecha ='$fecha' ";
-        $resultado = $cbd->query($query);
-        return $resultado; 
+          
+            $query = "DELETE FROM diario WHERE id_usuario ='$ide' and titulo ='$titulo1' and fecha ='$fecha' ";
+            $resultado3 = $cbd->query($query);  
+        
+        
+        return $resultado3;
     }
 
     static public function CrearNotasM($datosC, $tablaBD){
@@ -149,6 +152,17 @@ class notasM extends ConexionBD{
         $query = "SELECT * FROM datos_usuario WHERE id_usuario=$id_usuario ";
         $result = $cbd ->query($query);
         return $result;
+    }
+
+    static public function editar_foto($datosC){
+
+        $cbd = ConexionBD::cBD();
+        extract($datosC);
+        $foto=notasC::mysql_fix_string($cbd,$foto);
+        $query ="UPDATE datos_usuario SET archivo='$foto'
+                WHERE id_usuario='$id_usuario' ";;  
+        $resultado = $cbd->query($query);
+        return $resultado;
     }
 }
 

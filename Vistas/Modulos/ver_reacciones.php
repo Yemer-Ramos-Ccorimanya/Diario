@@ -17,3 +17,14 @@ $respuesta = notasM::Ver_ReaccionesM($datosC);
        
 
 ?>
+<form method="post" action="">
+	<input type="submit" name="dejar_de_ver_reacciones" value="dejar de ver reacciones">
+</form>
+
+<?php
+if(!empty( $_POST['dejar_de_ver_reacciones'])){
+    header("location: index.php?ruta=notas_publicas");
+
+}
+
+?>

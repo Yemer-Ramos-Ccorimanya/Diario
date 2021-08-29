@@ -13,20 +13,21 @@
 <?php
 if(!empty($_POST['registrar_datos'])){
 ?>
+
  <form method="post" action=" " enctype="multipart/form-data">
     <input type="text" placeholder="nombre" name="nombre" required>
     <input type="text" placeholder="apellido" name="apellido" required>
     <input type="text" placeholder="edad" name="edad" required>
     <input type="text" placeholder="ciudad" name="ciudad" required> 
     <input  name="userfile" type="file" >
-    <input type="submit" name="subir" value="guardar datos">
-  </form>
-
+    <input type="submit" name="subir" value="guardar datos">  
 <?php  
   }
   ?>
 <?php 
-
+    if(!empty($_POST['cancelar'])){
+      header("location: index.php?ruta=texto_diario");
+    }
     if(!empty($_POST['subir'])){
     
       $nombre=basename($_FILES['userfile']["name"]);
@@ -47,6 +48,9 @@ if(!empty($_POST['registrar_datos'])){
 
       $tablaBD = 'diario';
       $respuesta=notasM::GuardarDatos($datosC);
+      if(!$respuesta){ echo"falllo ";
+      echo("$ruta");
+      }
      }
 }
 ?>

@@ -1,6 +1,7 @@
 <?php
-    session_destroy();
-    //session_start();
-    
+$salir = new notasC();
+$salir->salir();
+header("location: index.php?ruta=ingreso");
+
 ?>
 

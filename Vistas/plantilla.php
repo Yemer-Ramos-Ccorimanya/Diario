@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>CRUD</title>
 
-	<link rel="stylesheet" type="text/css" href="Vistas/css/estilos.css">
+	<link rel="stylesheet" type="text/css" href="Vistas/css/estilos3.css">
 
 </head>
 <body>
@@ -18,6 +18,7 @@
 <section>
 
 <?php
+
 
     $rutas = new RutasControlador();
     $modulo = $rutas->Rutas();
